@@ -1,0 +1,44 @@
+# robots.txt for villageconnectiononline.com
+# Jackie Kelly — Old Village & Old Mount Pleasant REALTOR®, The Cassina Group
+
+User-agent: *
+Allow: /
+
+# Search + AI crawlers explicitly welcomed
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://villageconnectiononline.com/sitemap.xml
