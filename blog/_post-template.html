@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="description" content="{{POST_META_DESCRIPTION}}" />
+  <link rel="canonical" href="https://villageconnectiononline.com/blog/{{POST_SLUG}}" />
+  <meta property="og:title" content="{{POST_TITLE}}" />
+  <meta property="og:description" content="{{POST_META_DESCRIPTION}}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://villageconnectiononline.com/blog/{{POST_SLUG}}" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{POST_TITLE}}",
+    "description": "{{POST_META_DESCRIPTION}}",
+    "datePublished": "{{POST_DATE_ISO}}",
+    "url": "https://villageconnectiononline.com/blog/{{POST_SLUG}}",
+    "author": {
+      "@type": "Person",
+      "name": "Jackie Kelly",
+      "jobTitle": "REALTOR®",
+      "worksFor": { "@type": "Organization", "name": "The Cassina Group" },
+      "url": "https://villageconnectiononline.com",
+      "telephone": "843-991-9111",
+      "email": "Jackie@TheCassinaGroup.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "309 Coleman Blvd",
+        "addressLocality": "Mount Pleasant",
+        "addressRegion": "SC",
+        "postalCode": "29464"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Village Connection — Jackie Kelly Real Estate Blog",
+      "url": "https://villageconnectiononline.com/blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://villageconnectiononline.com/blog/{{POST_SLUG}}"
+    },
+    "about": [
+      { "@type": "Place", "name": "Old Village, Mount Pleasant, SC" },
+      { "@type": "Place", "name": "Old Mount Pleasant, SC" },
+      { "@type": "Place", "name": "Mount Pleasant, SC" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink:        #2A2F35;
+      --drift:      #6B7280;
+      --slate:      #8D9BA8;
+      --mist:       #F4F6F8;
+      --white:      #FFFFFF;
+      --border:     #E2E8ED;
+      --tidal:      #4A7C9E;
+      --tidal-pale: #EBF2F7;
+      --sand:       #C9A97A;
+      --sand-pale:  #F7F1E8;
+      --ink-dark:   #1C2127;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; background: var(--white); color: var(--ink); line-height: 1.75; font-size: 16px; -webkit-font-smoothing: antialiased; }
+
+    /* NAV */
+    .nav { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; }
+    .nav-inner { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { text-decoration: none; }
+    .nav-brand-name { font-family: 'Lora', serif; font-size: .98rem; font-weight: 600; color: var(--ink); display: block; }
+    .nav-brand-sub { font-size: .62rem; color: var(--slate); font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
+    .nav-links { display: flex; list-style: none; gap: .1rem; }
+    .nav-links a { text-decoration: none; color: var(--drift); font-size: .75rem; font-weight: 600; padding: .35rem .75rem; border-radius: 3px; letter-spacing: .06em; text-transform: uppercase; transition: color .2s, background .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--ink); background: var(--mist); }
+    .nav-cta { background: var(--ink) !important; color: var(--white) !important; }
+    .nav-cta:hover { background: #3d444c !important; }
+    .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--ink); border-radius: 2px; transition: all .3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    .mobile-menu { display: none; background: var(--white); border-top: 1px solid var(--border); }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a { display: block; padding: .9rem 1.5rem; text-decoration: none; color: var(--drift); font-size: .82rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; border-bottom: 1px solid var(--border); transition: background .15s; }
+    .mobile-menu a:hover { background: var(--mist); color: var(--ink); }
+    .mobile-menu a.m-cta { color: var(--tidal); }
+
+    /* PAGE HEADER */
+    .page-header { background: var(--ink-dark); padding: 3.5rem 1.5rem 4.5rem; position: relative; overflow: hidden; }
+    .page-header::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 80%, rgba(74,124,158,.13) 0%, transparent 55%), radial-gradient(ellipse at 85% 15%, rgba(201,169,122,.07) 0%, transparent 50%); }
+    .page-header::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 48px; background: var(--white); clip-path: ellipse(52% 100% at 50% 100%); }
+    .page-header-inner { max-width: 740px; margin: 0 auto; position: relative; }
+    .back-link { display: inline-flex; align-items: center; gap: .4rem; text-decoration: none; color: rgba(255,255,255,.4); font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 1.5rem; transition: color .2s; }
+    .back-link:hover { color: rgba(255,255,255,.75); }
+    .post-kicker { font-size: .66rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: rgba(201,169,122,.75); margin-bottom: .6rem; }
+    .page-header h1 { font-family: 'Lora', serif; font-size: clamp(1.6rem, 3.2vw, 2.2rem); font-weight: 600; color: var(--white); line-height: 1.25; margin-bottom: .85rem; }
+    .post-meta-bar { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: .85rem; }
+    .post-date-disp { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.4); }
+
+    /* ARTICLE BODY */
+    .post-wrap { max-width: 740px; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
+    .post-content h2 { font-family: 'Lora', serif; font-size: 1.15rem; font-weight: 600; color: var(--ink); margin: 2rem 0 .65rem; line-height: 1.35; }
+    .post-content h2:first-child { margin-top: 0; }
+    .post-content h3 { font-family: 'Lora', serif; font-size: 1rem; font-weight: 600; color: var(--ink); margin: 1.5rem 0 .5rem; line-height: 1.35; }
+    .post-content p { color: var(--drift); font-size: .97rem; line-height: 1.85; margin-bottom: 1rem; }
+    .post-content p:last-child { margin-bottom: 0; }
+    .post-content ul { margin-left: 1.35rem; margin-bottom: 1rem; color: var(--drift); font-size: .97rem; line-height: 1.9; }
+    .post-content ol { margin-left: 1.35rem; margin-bottom: 1rem; color: var(--drift); font-size: .97rem; line-height: 1.9; }
+    .post-content li { margin-bottom: .3rem; }
+    .post-content a { color: var(--tidal); }
+    .post-content strong { color: var(--ink); font-weight: 600; }
+    .post-content blockquote { border-left: 3px solid var(--sand); padding: 1rem 1.5rem; margin: 1.5rem 0; font-family: 'Lora', serif; font-style: italic; color: var(--drift); background: var(--sand-pale); border-radius: 0 4px 4px 0; }
+
+    /* BIO & NAV */
+    .post-rule { width: 36px; height: 2px; background: var(--sand); margin: 2.5rem 0; border-radius: 1px; }
+    .post-bio { margin-top: 2.5rem; padding: 1.5rem; background: var(--mist); border: 1px solid var(--border); border-radius: 4px; font-size: .85rem; color: var(--drift); line-height: 1.8; font-style: italic; }
+    .post-bio strong { color: var(--ink); font-style: normal; }
+    .post-bio a { color: var(--tidal); }
+    .post-nav { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .post-nav a { text-decoration: none; font-size: .76rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--tidal); transition: color .2s; }
+    .post-nav a:hover { color: var(--ink); }
+
+    /* FOOTER */
+    footer { background: #151a1f; color: rgba(255,255,255,.35); padding: 2.5rem 1.5rem; }
+    .footer-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; }
+    .footer-brand { font-family: 'Lora', serif; font-size: .95rem; color: rgba(255,255,255,.75); margin-bottom: .3rem; }
+    .footer-info { font-size: .74rem; line-height: 1.8; }
+    .footer-info a { color: rgba(255,255,255,.35); text-decoration: none; }
+    .footer-info a:hover { color: rgba(255,255,255,.7); }
+    .footer-links { display: flex; flex-direction: column; gap: .35rem; align-items: flex-end; }
+    .footer-links a { color: rgba(255,255,255,.35); text-decoration: none; font-size: .7rem; font-weight: 600; letter-spacing: .05em; transition: color .2s; }
+    .footer-links a:hover { color: var(--sand); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-links { align-items: flex-start; flex-direction: row; flex-wrap: wrap; gap: .65rem; margin-top: .5rem; }
+    }
+    @media (max-width: 600px) {
+      .page-header { padding: 2.5rem 1.25rem 3.5rem; }
+      .post-wrap { padding: 2.5rem 1.25rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">
+      <span class="nav-brand-name">Jackie Kelly</span>
+      <span class="nav-brand-sub">Old Village REALTOR® · The Cassina Group</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#neighborhood">Old Village</a></li>
+      <li><a href="index.html" class="active">Blog</a></li>
+      <li><a href="../index.html#testimonials">Reviews</a></li>
+      <li><a href="../index.html#faq">FAQ</a></li>
+      <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../index.html#about" onclick="closeMenu()">About Jackie</a>
+    <a href="../index.html#neighborhood" onclick="closeMenu()">Old Village</a>
+    <a href="index.html" onclick="closeMenu()">Blog</a>
+    <a href="../index.html#testimonials" onclick="closeMenu()">Reviews</a>
+    <a href="../index.html#faq" onclick="closeMenu()">FAQ</a>
+    <a href="../index.html#contact" class="m-cta" onclick="closeMenu()">Contact Jackie →</a>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <a href="index.html" class="back-link">← All Posts</a>
+    <p class="post-kicker">The Village Connection · Jackie Kelly</p>
+    <h1>{{POST_TITLE}}</h1>
+    <div class="post-meta-bar">
+      <span class="post-date-disp">{{POST_DATE}}</span>
+    </div>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <div class="post-content">
+    {{POST_CONTENT}}
+    <div class="post-rule"></div>
+    <div class="post-bio">
+      <strong>Jackie Kelly</strong> is a licensed REALTOR® with The Cassina Group, specializing in Old Village and Old Mount Pleasant real estate in Mount Pleasant, SC. A resident since 1988 and licensed since 2000, Jackie is a Realtor of Distinction, Top Producer, and the neighborhood's go-to expert. She can be reached at <a href="tel:8439919111">843-991-9111</a> or <a href="mailto:Jackie@TheCassinaGroup.com">Jackie@TheCassinaGroup.com</a>.
+    </div>
+    <div class="post-nav">
+      <a href="index.html">← All Posts</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Jackie Kelly · REALTOR®</div>
+      <div class="footer-info">
+        The Cassina Group · 309 Coleman Blvd · Mount Pleasant, SC 29464<br>
+        <a href="tel:8439919111">843-991-9111</a> · <a href="mailto:Jackie@TheCassinaGroup.com">Jackie@TheCassinaGroup.com</a><br>
+        <span style="opacity:.55;">Specializing in Old Village and Old Mount Pleasant real estate since 2000 · © 2026 Jackie Kelly · The Cassina Group, LLC.</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/jackiekellyrealestate/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=100054585784920" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.linkedin.com/in/jackie-kelly-864b2826" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.zillow.com/profile/jackie670" target="_blank" rel="noopener">Zillow</a>
+      <a href="https://www.thecassinagroup.com/agents/6160-Jackie-Kelly/" target="_blank" rel="noopener">Cassina Profile</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hb = document.getElementById('hamburger');
+  const mm = document.getElementById('mobileMenu');
+  hb.addEventListener('click', () => { hb.classList.toggle('open'); mm.classList.toggle('open'); });
+  function closeMenu() { hb.classList.remove('open'); mm.classList.remove('open'); }
+</script>
+</body>
+</html>
